@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import RouteCard from "../components/journey/RouteCard";
+import { mockRoutes } from "../data/mockRoutes";
 import "../styles/results.css";
 
 function Results() {
@@ -7,7 +8,6 @@ function Results() {
 
   const origin = searchParams.get("origin");
   const destination = searchParams.get("destination");
-
 
   return (
     <div className="results">
@@ -23,26 +23,15 @@ function Results() {
         </p>
       </div>
 
-      <RouteCard
-  title="🚋 Fastest Route"
-  transport="Tram 6"
-  time="22 min"
-  cost="36 SEK"
-/>
-
-<RouteCard
-  title="🚲 Cheapest Route"
-  transport="Bike + Tram"
-  time="18 min"
-  cost="20 SEK"
-/>
-
-<RouteCard
-  title="🌱 Lowest CO₂ Route"
-  transport="Tram + Walk"
-  time="25 min"
-  cost="25 SEK"
-/>
+      {mockRoutes.map((route) => (
+        <RouteCard
+          key={route.id}
+          title={route.title}
+          transport={route.transport}
+          time={route.time}
+          cost={route.cost}
+        />
+      ))}
     </div>
   );
 }
