@@ -90,3 +90,80 @@ Future versions will integrate real transportation data and maps.
 
 - [x] Created reusable RouteCard component
 - [x] Added route information
+
+## 🚀 Progress - Sprint 2
+
+### Goal
+
+Transition MobilityFlow from a frontend prototype into a full-stack application by establishing communication between the React frontend and the ASP.NET Core backend.
+
+### Scope
+
+The objective of Sprint 2 is to replace static frontend data with dynamic data served by the backend API.
+
+### Planned Deliverables
+
+- [ ] Install and configure Axios
+- [ ] Create frontend service layer
+- [ ] Connect React application to ASP.NET Core API
+- [ ] Consume data from backend endpoints
+- [ ] Replace mock route data with API responses
+- [ ] Handle loading states
+- [ ] Handle API errors gracefully
+
+### Architecture
+
+```text
+React Frontend
+      ↓
+Axios Service Layer
+      ↓
+ASP.NET Core Web API
+      ↓
+JSON Response
+      ↓
+React Components
+```
+
+### New Project Structure
+
+```text
+src/
+
+├── components/
+├── pages/
+├── router/
+├── styles/
+├── data/
+│   └── mockRoutes.js
+│
+└── services/
+    └── routeService.js
+```
+
+### Expected Outcome
+
+At the end of Sprint 2, route data will no longer be hardcoded in the frontend.
+
+Instead, the application will retrieve route information from the backend API, laying the foundation for future integrations including:
+
+- Trafiklab Journey Planner API
+- PostgreSQL database
+- Saved routes and user preferences
+- Real-time transportation data
+
+### Learning Objectives
+
+- REST API consumption
+- Async JavaScript with async/await
+- Axios requests and responses
+- Separation of concerns
+- Service layer design
+- Frontend-backend communication
+
+### Success Criteria
+
+- [ ] React successfully calls backend endpoints
+- [ ] API responses are displayed in the UI
+- [ ] Route cards are generated from backend data
+- [ ] No hardcoded route data remains in Results.jsx
