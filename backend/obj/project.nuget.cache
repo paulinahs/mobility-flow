@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vqghr/mNWKA=",
+  "success": true,
+  "projectFilePath": "/Users/paulinahesselius/Library/Mobile Documents/com~apple~CloudDocs/04_Learning/projects/mobility-flow/backend/backend.csproj",
+  "expectedPackageFiles": [
+    "/Users/paulinahesselius/.nuget/packages/microsoft.aspnetcore.openapi/10.0.14/microsoft.aspnetcore.openapi.10.0.14.nupkg.sha512",
+    "/Users/paulinahesselius/.nuget/packages/microsoft.openapi/2.12.2/microsoft.openapi.2.12.2.nupkg.sha512"
+  ],
+  "logs": []
+}
