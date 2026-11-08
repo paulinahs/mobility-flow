@@ -3,6 +3,8 @@ import { useSearchParams } from "react-router-dom";
 import RouteCard from "../components/journey/RouteCard";
 import { getRoutes } from "../services/routeService";
 
+import "../styles/results.css";
+
 function Results() {
   const [searchParams] = useSearchParams();
   const [routes, setRoutes] = useState([]);
