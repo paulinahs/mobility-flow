@@ -1,18 +1,20 @@
-# MobilityFlow
+# 🚆 MobilityFlow
+
+> Making transportation decisions smarter.
 
 ## Overview
 
-MobilityFlow is a mobility decision platform that helps users choose the best way to travel based on their priorities.
+MobilityFlow is a mobility decision platform that helps travelers compare and select the best transportation option based on cost, accessibility, sustainability, and personal preferences.
 
-Unlike traditional route planners that only display routes, MobilityFlow compares transportation options across cost, travel time, accessibility, reliability, and sustainability to recommend the optimal journey.
+Unlike traditional route planners that focus solely on navigation, MobilityFlow helps users understand **which journey is the best choice for their specific needs**.
 
 ---
 
-## Problem
+## The Problem
 
-Travelers often need to compare multiple transportation providers and apps to determine the best way to reach their destination.
+Modern travelers often need to switch between multiple applications, transport providers, and booking platforms to compare transportation options.
 
-Current journey planners answer:
+Current route planners answer:
 
 > "How can I get there?"
 
@@ -20,88 +22,117 @@ MobilityFlow answers:
 
 > "What is the best option for me?"
 
+By comparing travel alternatives in a single interface, users can make more informed transportation decisions.
+
 ---
 
-## Solution
+## Features
 
-Users search for a journey and receive a comparison of available transportation options, including:
+### 🔍 Journey Search
+
+Search for transportation options between two locations.
+
+### 📊 Route Comparison
+
+Compare multiple travel options side-by-side using key metrics:
 
 - Travel time
 - Estimated cost
+- Transport methods
 - Accessibility information
-- Sustainability score (CO₂ impact)
-- Transport type(s)
+- Sustainability indicators
 
-Based on user preferences, MobilityFlow recommends the most suitable journey.
+### 🎯 Personalized Priorities
 
----
+Choose what matters most:
 
-## MVP Features
-
-### Journey Search
-Search between an origin and destination.
-
-### Route Comparison
-Compare transportation options side-by-side.
-
-### User Preferences
-Prioritize:
 - Cheapest
 - Fastest
 - Greenest
 - Most Accessible
 
-### Smart Recommendation
-Receive a recommended journey with a clear explanation of why it was selected.
+### 🤖 Smart Recommendation
+
+Receive a recommended journey based on personal preferences and selected priorities.
 
 ---
 
 ## Example
 
-**Journey:** Göteborg → Stockholm
+### Journey
 
-### Recommended Option: MTRX Train
+Göteborg → Stockholm
+
+### Recommended Option
+
+🚄 MTRX Train
 
 - Cost: 349 SEK
 - Travel Time: 3h 12m
 - Accessibility: Fully Accessible
-- CO₂: Low Emissions
+- CO₂ Impact: Low
 
-**Why Recommended?**
+**Recommended because:**
+
 - Within budget
 - Lowest environmental impact
-- Fully accessible
-- Arrives before requested arrival time
+- Accessible journey
+- Arrives before requested time
 
 ---
 
 ## Tech Stack
 
 ### Frontend
+
 - React
 - React Router
 - CSS
 
 ### Backend
+
 - ASP.NET Core Web API
 
 ### Data
+
 - Mock transportation data (MVP)
-- Real transport integrations planned for future releases
+- Future real-world transport integrations
 
 ---
 
-## Future Development
+## Roadmap
 
-- MaaS (Mobility as a Service) integrations
-- Ticket booking
-- Mobility wallet
-- Real-time service disruptions
-- Historical reliability analysis
-- User accounts and saved journeys
+### MVP
+
+- [x] Journey Search
+- [x] Route Comparison
+- [ ] Personalized Preferences
+- [ ] Smart Recommendations
+- [ ] Accessibility Indicators
+- [ ] Sustainability Scoring
+
+### Future Development
+
+- Reliability Scoring
+- Historical Delay Analysis
+- Mobility-as-a-Service (MaaS) Integrations
+- Ticket Booking
+- Mobility Wallet
+- Real-Time Disruption Insights
+- Saved Journeys & User Profiles
 
 ---
 
-## Vision
+## Project Vision
 
-MobilityFlow transforms journey planning into decision-making by helping users choose the transportation option that best fits their needs, budget, accessibility requirements, and sustainability goals.
+MobilityFlow aims to bridge the gap between route planning and Mobility-as-a-Service (MaaS) by helping travelers make smarter transportation decisions based on what matters most to them.
+
+The long-term goal is to create a platform where users can compare, evaluate, and ultimately manage their mobility experience through a single intelligent interface.
+
+---
+
+## Status
+
+🚧 Currently under active development.
+
+This project began as a route comparison tool and is evolving into a mobility decision platform focused on accessibility, sustainability, cost transparency, and intelligent travel recommendations.
