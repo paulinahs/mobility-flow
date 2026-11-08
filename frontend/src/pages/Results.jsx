@@ -1,35 +1,38 @@
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import RouteCard from "../components/journey/RouteCard";
-import { mockRoutes } from "../data/mockRoutes";
-import "../styles/results.css";
+import { getRoutes } from "../services/routeService";
 
 function Results() {
   const [searchParams] = useSearchParams();
+  const [routes, setRoutes] = useState([]);
 
   const origin = searchParams.get("origin");
   const destination = searchParams.get("destination");
 
+  useEffect(() => {
+    const fetchRoutes = async () => {
+      try {
+        const data = await getRoutes();
+        setRoutes(data);
+      } catch (error) {
+        console.error("Failed to fetch routes:", error);
+      }
+    };
+
+    fetchRoutes();
+  }, []);
+
   return (
-    <div className="results">
-      <h1>Route Results</h1>
+    <div className="results-container">
+      <h1>
+        Routes from {origin} to {destination}
+      </h1>
 
-      <div className="journey-summary">
-        <p>
-          <strong>From:</strong> {origin}
-        </p>
-
-        <p>
-          <strong>To:</strong> {destination}
-        </p>
-      </div>
-
-      {mockRoutes.map((route) => (
+      {routes.map((route) => (
         <RouteCard
           key={route.id}
-          title={route.title}
-          transport={route.transport}
-          time={route.time}
-          cost={route.cost}
+          route={route}
         />
       ))}
     </div>
