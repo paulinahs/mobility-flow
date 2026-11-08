@@ -31,3 +31,4 @@
 /Users/paulinahesselius/Library/Mobile Documents/com~apple~CloudDocs/04_Learning/projects/mobility-flow/backend/obj/Debug/net10.0/backend.pdb
 /Users/paulinahesselius/Library/Mobile Documents/com~apple~CloudDocs/04_Learning/projects/mobility-flow/backend/obj/Debug/net10.0/backend.genruntimeconfig.cache
 /Users/paulinahesselius/Library/Mobile Documents/com~apple~CloudDocs/04_Learning/projects/mobility-flow/backend/obj/Debug/net10.0/ref/backend.dll
+/Users/paulinahesselius/Library/Mobile Documents/com~apple~CloudDocs/04_Learning/projects/mobility-flow/backend/obj/Debug/net10.0/backend.sourcelink.json
