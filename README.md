@@ -1,169 +1,107 @@
-# 🚍 MobilityFlow
+# MobilityFlow
 
-MobilityFlow is a full-stack mobility planning application inspired by Mobility-as-a-Service (MaaS) platforms such as Västtrafik, Transit, and FlixBus.
+## Overview
 
-The goal is to allow travelers to search for journeys between locations and compare different transportation options based on travel time, cost, and environmental impact.
+MobilityFlow is a mobility decision platform that helps users choose the best way to travel based on their priorities.
 
----
-
-## 📖 Project Idea
-
-Modern travelers often need to compare multiple transport methods before deciding how to travel.
-
-MobilityFlow aims to provide a simple and intuitive interface where users can:
-
-- Search routes between two locations
-- Compare transportation alternatives
-- View travel details
-- Compare journey costs
-- Evaluate environmental impact
-- Visualize routes on a map
-
-The project is also intended as a portfolio project demonstrating modern full-stack development skills using React, ASP.NET Core, and PostgreSQL.
+Unlike traditional route planners that only display routes, MobilityFlow compares transportation options across cost, travel time, accessibility, reliability, and sustainability to recommend the optimal journey.
 
 ---
 
-## 🎯 MVP Scope
+## Problem
 
-The initial version focuses on the core user journey:
+Travelers often need to compare multiple transportation providers and apps to determine the best way to reach their destination.
 
-1. User enters an origin and destination
-2. User searches for available routes
-3. Results are displayed
-4. Different route options can be compared
+Current journey planners answer:
 
-Future versions will integrate real transportation data and maps.
+> "How can I get there?"
+
+MobilityFlow answers:
+
+> "What is the best option for me?"
 
 ---
 
-## 🛠 Tech Stack
+## Solution
+
+Users search for a journey and receive a comparison of available transportation options, including:
+
+- Travel time
+- Estimated cost
+- Accessibility information
+- Sustainability score (CO₂ impact)
+- Transport type(s)
+
+Based on user preferences, MobilityFlow recommends the most suitable journey.
+
+---
+
+## MVP Features
+
+### Journey Search
+Search between an origin and destination.
+
+### Route Comparison
+Compare transportation options side-by-side.
+
+### User Preferences
+Prioritize:
+- Cheapest
+- Fastest
+- Greenest
+- Most Accessible
+
+### Smart Recommendation
+Receive a recommended journey with a clear explanation of why it was selected.
+
+---
+
+## Example
+
+**Journey:** Göteborg → Stockholm
+
+### Recommended Option: MTRX Train
+
+- Cost: 349 SEK
+- Travel Time: 3h 12m
+- Accessibility: Fully Accessible
+- CO₂: Low Emissions
+
+**Why Recommended?**
+- Within budget
+- Lowest environmental impact
+- Fully accessible
+- Arrives before requested arrival time
+
+---
+
+## Tech Stack
 
 ### Frontend
-
 - React
-- Vite
-- React Router DOM
+- React Router
 - CSS
 
 ### Backend
-
 - ASP.NET Core Web API
-- C#
 
-### Database
-
-- PostgreSQL
-
-### Planned Integrations
-
-- Trafiklab API
-- Leaflet
-- OpenStreetMap
+### Data
+- Mock transportation data (MVP)
+- Real transport integrations planned for future releases
 
 ---
 
-## ✅ Progress - Sprint 1
+## Future Development
 
-### Project Setup
+- MaaS (Mobility as a Service) integrations
+- Ticket booking
+- Mobility wallet
+- Real-time service disruptions
+- Historical reliability analysis
+- User accounts and saved journeys
 
-- [x] Created React project using Vite
-- [x] Created ASP.NET Core Web API
-- [x] Configured project folder structure
-- [x] Verified frontend and backend startup
+---
 
-### Frontend
+## Vision
 
-- [x] Created Home page
-- [x] Created Results page
-- [x] Created Route Details page
-- [x] Implemented React Router navigation
-
-### Search Flow
-
-- [x] Added origin input
-- [x] Added destination input
-- [x] Added search functionality
-- [x] Passed route parameters through URL
-- [x] Retrieved search parameters on Results page
-
-### Components
-
-- [x] Created reusable RouteCard component
-- [x] Added route information
-
-## 🚀 Progress - Sprint 2
-
-### Goal
-
-Transition MobilityFlow from a frontend prototype into a full-stack application by establishing communication between the React frontend and the ASP.NET Core backend.
-
-### Scope
-
-The objective of Sprint 2 is to replace static frontend data with dynamic data served by the backend API.
-
-### Planned Deliverables
-
-- [ ] Install and configure Axios
-- [ ] Create frontend service layer
-- [ ] Connect React application to ASP.NET Core API
-- [ ] Consume data from backend endpoints
-- [ ] Replace mock route data with API responses
-- [ ] Handle loading states
-- [ ] Handle API errors gracefully
-
-### Architecture
-
-```text
-React Frontend
-      ↓
-Axios Service Layer
-      ↓
-ASP.NET Core Web API
-      ↓
-JSON Response
-      ↓
-React Components
-```
-
-### New Project Structure
-
-```text
-src/
-
-├── components/
-├── pages/
-├── router/
-├── styles/
-├── data/
-│   └── mockRoutes.js
-│
-└── services/
-    └── routeService.js
-```
-
-### Expected Outcome
-
-At the end of Sprint 2, route data will no longer be hardcoded in the frontend.
-
-Instead, the application will retrieve route information from the backend API, laying the foundation for future integrations including:
-
-- Trafiklab Journey Planner API
-- PostgreSQL database
-- Saved routes and user preferences
-- Real-time transportation data
-
-### Learning Objectives
-
-- REST API consumption
-- Async JavaScript with async/await
-- Axios requests and responses
-- Separation of concerns
-- Service layer design
-- Frontend-backend communication
-
-### Success Criteria
-
-- [ ] React successfully calls backend endpoints
-- [ ] API responses are displayed in the UI
-- [ ] Route cards are generated from backend data
-- [ ] No hardcoded route data remains in Results.jsx
+MobilityFlow transforms journey planning into decision-making by helping users choose the transportation option that best fits their needs, budget, accessibility requirements, and sustainability goals.
